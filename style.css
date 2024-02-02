@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+/* so para centralizar para visualizar melhor */
+body{
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    background-image: linear-gradient(45deg, #eeeeee, #ffffff);
+}
+/* fim */
+.container{
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+.container:hover .flip{
+    transform: rotateY(180deg);
+}
+
+.flip{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.frente,.tras{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #0000001b;
+    backface-visibility: hidden;
+}
+
+.frente{
+    background-image: url(./imagens/jogos.png);
+    background-size: cover;
+}
+
+.tras{
+    background-color: aqua;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: black;
+
+}
